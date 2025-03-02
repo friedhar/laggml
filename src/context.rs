@@ -2,7 +2,7 @@ use crate::sys::{ggml_context, ggml_init, ggml_init_params};
 
 pub struct GgmlContext {
     params: ggml_init_params,
-    x: *mut ggml_context,
+    pub(crate) x: *mut ggml_context,
 }
 
 impl GgmlContext {
