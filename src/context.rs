@@ -12,7 +12,7 @@ impl GgmlContext {
             mem_buffer: std::ptr::null_mut(),
             no_alloc,
         };
-        let x = ggml_init(params);
-        GgmlContext { params }
+        let x = unsafe { ggml_init(params) };
+        GgmlContext { params, x }
     }
 }

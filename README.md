@@ -11,3 +11,4 @@ A computation graph. eg. a scaled dot product attention would look something lik
 Underlying accelerator device - CUDA, TPUs, CPUs, TT, MPS, AMD GPUs etc..
 
 ## Quick Guide
+
