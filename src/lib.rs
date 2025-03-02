@@ -1,3 +1,4 @@
+pub mod context;
 pub mod sys;
 
 #[cfg(test)]
