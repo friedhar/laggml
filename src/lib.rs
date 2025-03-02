@@ -1,5 +1,6 @@
 pub mod context;
 pub mod sys;
+pub mod tensor;
 
 #[cfg(test)]
 mod tests {
