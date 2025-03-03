@@ -1,16 +1,16 @@
 use crate::{
-    context::Contect,
+    context::Context,
     sys::{ggml_mul, ggml_mul_mat},
     tensor::Tensor2d,
     to_ffi::ToFfi,
 };
 
 pub struct Graph {
-    ctx: Contect,
+    ctx: Context,
 }
 
 impl Graph {
-    pub fn new(ctx: Contect) -> Graph {
+    pub fn new(ctx: Context) -> Graph {
         Graph { ctx }
     }
 

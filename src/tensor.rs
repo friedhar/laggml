@@ -1,7 +1,7 @@
 use std::ffi::c_void;
 
 use crate::{
-    context::Contect,
+    context::Context,
     data_type::DataType,
     sys::{ggml_nbytes, ggml_new_tensor_2d, ggml_tensor, ggml_type_GGML_TYPE_F32, GGML_FILE_MAGIC},
     to_ffi::ToFfi,
@@ -12,7 +12,7 @@ pub struct Tensor2d {
 }
 
 impl Tensor2d {
-    pub fn new<T: DataType>(ctx: Contect, data: &[T::InitType], cols: i64, rows: i64) -> Tensor2d {
+    pub fn new<T: DataType>(ctx: Context, data: &[T::InitType], cols: i64, rows: i64) -> Tensor2d {
         let x = unsafe { ggml_new_tensor_2d(ctx.x, T::ggml_type(), cols, rows) };
         unsafe {
             std::ptr::copy_nonoverlapping(
