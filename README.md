@@ -1,5 +1,4 @@
-# A GGML Derived Tensor Libra
-Laggml is a GGML derived tensor library.
+# A GGML Derived Tensor Library
 
 ## GGML Architecture
 ### Context 
@@ -10,4 +9,3 @@ A computation graph. eg. a scaled dot product attention would look something lik
 Underlying accelerator device - CUDA, TPUs, CPUs, TT, MPS, AMD GPUs etc..
 
 ## Quick Guide
-
